@@ -5,6 +5,7 @@ import Link from "next/link";
 import { api } from "@/services/api";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { toast } from "sonner";
 
 export default function Home() {
 
@@ -21,6 +22,7 @@ export default function Home() {
 
       if(!response.data.token){
         console.log("usuario não identificado");
+        toast("usuario não identificado");
         return;
       }
 
