@@ -4,6 +4,8 @@ import { api } from "@/services/api";
 import { toast } from "sonner";
 import { OrderProps } from "@/lib/orderType";
 
+export const dynamic = "force-dynamic";
+
 async function getOrders(): Promise<OrderProps[] | []> {
     try {
         const token = await getCookieServer();
